@@ -1,15 +1,15 @@
 # Experiments in 2021 #
 Experiments carried out in the past (from 2011) are described hereafter:
-- [What's new 2020](whats_new_2020)
-- [What's new 2019](whats_new_2020)
-- [What's new 2018](whats_new_2020)
-- [What's new 2017](whats_new_2020)
-- [What's new 2016](whats_new_2020)
-- [What's new 2015](whats_new_2020)
-- [What's new 2014](whats_new_2020)
-- [What's new 2013](whats_new_2020)
-- [What's new 2012](whats_new_2020)
-- [What's new 2011](whats_new_2020)
+- [2020](whats_new_2020.md)
+- [2019](whats_new_2019.md)
+- [2018](whats_new_2018.md)
+- [2017](whats_new_2017.md)
+- [2016](whats_new_2016.md)
+- [2015](whats_new_2015.md)
+- [2014](whats_new_2014.md)
+- [2013](whats_new_2013.md)
+- [2012](whats_new_2012.md)
+- [2011](whats_new_2011.md)
 
 
 
