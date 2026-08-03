@@ -1,31 +1,17 @@
 # Experiments in 2021 #
-Experiments carried out in the past (from 2011) are described hereafter:
-- [2020](whats_new_2020.md)
-- [2019](whats_new_2019.md)
-- [2018](whats_new_2018.md)
-- [2017](whats_new_2017.md)
-- [2016](whats_new_2016.md)
-- [2015](whats_new_2015.md)
-- [2014](whats_new_2014.md)
-- [2013](whats_new_2013.md)
-- [2012](whats_new_2012.md)
-- [2011](whats_new_2011.md)
 
-
-
-# December #
+# December
 - In order to measure the current consumed by my BLE module, I have built a sub micro-Amp amp meter. I have used the setup proposed by [Crafty Coder](https://www.eevblog.com/forum/projects/nano-ammeter-project/), with a few modifications: a LCD display and an automatic range selection (using an Arduino pro micro). It works pretty well even though I cannot really estimate its precision. Nevertheless, it detects currents below 100nA. A picture is given below: 
 
 ![](assets/nanoamp.jpg)
 
-# November #
+# November
 - I have developed a small board to detect door / window opening using Bluetooth BLE.  I use the good ol' nrf51822 with the Arduino IDE and [Sandeep Mistry's BlePeripheral library](https://github.com/sandeepmistry/arduino-nRF5).
 ![](assets/ils-nrf51822.jpg)
 
   -  I use an ESP32 as a BLE to MQTT gateway. The BLE device use the advertisement message to transmit the state of an magnetic switch. The device is always in low power mode except when the state of the switch changes (interrupt). The board is powered by a button cell (CR2032). In order to use the low power mode, I have followed the indications given by Jean-Matthieu Dechristé on [his blog](https://www.iot-experiments.com/nrf51822-and-ble400/ blog). I have also used his slightly modified version of S. Mistry's library in order to use interrupt with a low power consumption (see his blog for details). 
 
-
-# October #
+# October
 - Testing Raspberry Pi Compute Module 4 on IO board.
   - Download rpiboot utility to mount the eMMC (https://github.com/raspberrypi/usbboot)
   - Install linux using, e.g., BalenaEtcher
@@ -42,7 +28,8 @@ Experiments carried out in the past (from 2011) are described hereafter:
   }
   ```
 
-# September 2021 #
+# September 2021
+
 - I have continued playing with Home Assistant et al. 
   - I have added a "linky" sensor to my setup. 
   - The linky meter is a "smart" electrical meter deployed since a few years in France. Information can be found [here](https://particulier.edf.fr/en/home/contract-and-consumption/meter/linky-meter.html). 
@@ -51,9 +38,10 @@ Experiments carried out in the past (from 2011) are described hereafter:
 
   ![](assets/linky_to_ora.jpg)
 
-* Up to now, to create a new RF 433MHz device, I have used a 4-key remote controller module to generate the frames and teach my switches/keys. This is a bit annoying because it means that I have to buy a 4-key RC to integrate 4 new switches. In order to avoid that, I can simply use the rc-switch Arduino library to generate my own personal codes. So, I am going to build a universal RC 433Mhz remote controller with which I can create my own codes and tech my RC-key cloners and switches. This will be described in [[SonOff RF bridge with HomeAssistant]] dedicated page.
+- Up to now, to create a new RF 433MHz device, I have used a 4-key remote controller module to generate the frames and teach my switches/keys. This is a bit annoying because it means that I have to buy a 4-key RC to integrate 4 new switches. In order to avoid that, I can simply use the rc-switch Arduino library to generate my own personal codes. So, I am going to build a universal RC 433Mhz remote controller with which I can create my own codes and tech my RC-key cloners and switches. This will be described in [[SonOff RF bridge with HomeAssistant]] dedicated page.
 
-# August 2021 #
+# August 2021
+
 - I have continued playing with Home Assistant et al. 
   - I have built a Zigbee remotely controlable 2-relay device with a motion sensor. The device also plays the role of a Zigbee router. The heart of the device is a CC2530+CC2591 module programmed with the [PTVO firmware](https://ptvo.info):
   ![](assets/cc2530_2591.jpg)
@@ -66,14 +54,15 @@ Experiments carried out in the past (from 2011) are described hereafter:
 ** More details are available on the [Zigbee dedicated page](zigbee.md). 
 - I have also installed a RF bridge based on SonOff's Rf bridge. Some information about this can be found in the [[SonOff RF bridge with HomeAssistant]] dedicated page. Thi sdevice allows cheap RF-controlled sensors and actuators to be integrated in the overall system. So, toay, I mix: Zigbee, Wifi, RF 433, LoRa communications... 
 
-# July 2021 #
+# July 2021
 
 - Continuing playing with Zigbee. 
   - I have created a Zigbee device using a simple CC2530 board and a firmware generator for this device (if you want to develop your own firmware for the CC, you'll need to buy the compiler...).
   - I have installed "Home Assistant" and "zigbee2mqtt". Now, I would be able to control / automate a few things in my house, but I am not convinced that this is actually very useful...
 - I have come back to my back scanner (first iteration in 2014 or so) in order to finish it. See the [Bat scanner dedicated page](bat_scanner.md).
 
-# June 2021 #
+# June 2021
+
 - I am now playing with Zigbee devices. 
   - I have bought a CC2531 Zigbee sniffer, a small Sonoff bridge and a 4-relay zigbee board (all from AliExpress). Now,n I can control four relays using Amazon Alexa... As usual, interesting but completely useless... The next step is to setup my own home zigbee server using Zigbee2MQTT. 
   
@@ -86,14 +75,15 @@ Experiments carried out in the past (from 2011) are described hereafter:
 
 - I have built two small keyboards using at Atmega32U.
 
-# May 2021 #
+# May 2021
+
 - Building a small custom keyboard using cheap Gateron switches and keycaps, and either an arduino or a bare Atmega (using the [VUsb library](https://www.obdev.at/products/vusb/download.html). See also the [LUFA library](http://www.fourwalledcubicle.com/LUFA.php).
 
 - I have soldered 2 ESP-Link boards:
 
   ![](assets/esplink-board.jpg)
 
-# April 2021 #
+# April 2021
 
 - I have setup a [esplink serial<=>wifi converter](https://github.com/jeelabs/esp-link). This very handy device, based on a ESP8266, allows an Arduino to be programmed remotely (without USB cable). 
   - After frying 3 ESP8266 due to bad breadboards (and my own stupidity), I have built a small board using my usual combination of solder bridges and wrapping.
@@ -111,12 +101,12 @@ Experiments carried out in the past (from 2011) are described hereafter:
 ![](assets/Galvogame.jpg)
 
 
-# March 2021 #
+# March 2021
+
 - 2021/03/07
   -  I have resurrected my galvo project. This is a long story. More information can be found on the [Galvo dedicated page](galvo.md).
 
-
-# February 2021 #
+# February 2021
 
 * 2021/02/21 
   - The refresh rate of my CRT was much too slow and one could see the display refresh even with 5 characters displayed. So I built a 8-bit DAC using a R2R resistor ladder in order to avoid the I2C latency of the MCP:
@@ -148,7 +138,7 @@ Experiments carried out in the past (from 2011) are described hereafter:
 
 - I have added a Python MQTT client to log the temp, humidity, pressure, etc. data to a mysql database. I use "sqlbrowser" to display the content of the data base. If I find some time, I'll write a Python HMI. Another solution would be to use an InfluxDb database (optimized for time series) and a Grafana dashboard. See this [tutorial](https://diyi0t.com/visualize-mqtt-data-with-influxdb-and-grafana/). I should also probably move to a more robust RPi distribution (e.g., dietpi) in order to prevent the nasty effect of power-cuts on the file system (dietpi allows to set parts of the file system read-only).
 
-# January 2021 #
+# January 2021
 
 - I have moved my lab to a new, much larger, room: 
   ![](assets/mylab2021a.jpg)
